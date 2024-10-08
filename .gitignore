@@ -1,3 +1,4 @@
+
 *.db
 var/*.db*
 *~
@@ -5,5 +6,4 @@ node_modules
 leveldb-store
 npm-debug.log
 .idea
-dist
-.env
+
