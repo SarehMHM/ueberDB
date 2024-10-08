@@ -43,6 +43,34 @@ export const databases:DatabaseType = {
       getMax: 1,
     },
   },
+  
+  dynamodb: {
+    create: async () => {
+      const DynamoDB = require('../../databases/dynamodb_db');
+      return new DynamoDB({
+        aws: {
+          region: process.env.AWS_REGION,
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        },
+        tableName: process.env.DYNAMODB_TABLE,
+      });
+    },
+    clear: async (db) => {
+      console.log('Clearing DynamoDB table...');
+      // Implement clearing logic here
+      // This might involve scanning and deleting all items
+    },
+    close: async (db) => {
+      await db.close();
+    },
+    speeds: {
+      setMax: 2,
+      getMax: 1,
+      findKeysMax: 5,
+      removeMax: 2,
+    },
+  },
   postgres: {
     user: 'ueberdb',
     host: 'localhost',

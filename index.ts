@@ -31,6 +31,7 @@ import Mock_db from './databases/mock_db'
 import Mongodb_db from './databases/mongodb_db'
 import MSSQL from './databases/mssql_db'
 import Mysql_db from './databases/mysql_db'
+import Dynamodb_db from './databases/dynamodb_db'
 import Postgres_db from './databases/postgres_db'
 import Postgrespool_db from './databases/postgrespool_db'
 import RedisDB from './databases/redis_db'
@@ -46,6 +47,7 @@ type CBDBType = {
 
 export type DatabaseType =
     | 'mysql'
+    | 'dynamodb'
     | 'postgres'
     | 'sqlite'
     | 'rustydb'
@@ -134,7 +136,9 @@ export class Database {
   initDB(){
     switch (this.type){
         case 'mysql':
-            return new Mysql_db(this.dbSettings);
+          return new Mysql_db(this.dbSettings);
+        case 'dynamodb':
+          return new Dynamodb_db(this.dbSettings);
         case 'postgres':
           return new Postgres_db(this.dbSettings);
         case 'sqlite':
