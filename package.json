@@ -1,7 +1,7 @@
 {
   "name": "ueberdb2",
   "description": "Transform every database into a object key value store",
-  "url": "https://github.com/ether/ueberDB",
+  "url": "https://github.com/SarehMHM/ueberDB",
   "type": "commonjs",
   "types": "./dist/index.d.ts",
   "keywords": [
@@ -62,12 +62,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ether/ueberDB.git"
+    "url": "https://github.com/SarehMHM/ueberDB.git"
   },
   "main": "./dist/index.js",
-  "version": "5.0.6",
+  "version": "5.0.7",
   "bugs": {
-    "url": "https://github.com/ether/ueberDB/issues"
+    "url": "https://github.com/SarehMHM/ueberDB/issues"
   },
   "files": [
     "dist/databases",
@@ -75,7 +75,7 @@
     "dist/*.d.ts",
     "dist/lib"
   ],
-  "homepage": "https://github.com/ether/ueberDB",
+  "homepage": "https://github.com/SarehMHM/ueberDB",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
