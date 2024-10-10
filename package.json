@@ -1,5 +1,6 @@
 {
   "name": "ueberdb2",
+  "version": "5.0.7",
   "description": "Transform every database into a object key value store",
   "url": "https://github.com/SarehMHM/ueberDB",
   "type": "commonjs",
@@ -65,7 +66,6 @@
     "url": "https://github.com/SarehMHM/ueberDB.git"
   },
   "main": "./dist/index.js",
-  "version": "5.0.7",
   "bugs": {
     "url": "https://github.com/SarehMHM/ueberDB/issues"
   },
